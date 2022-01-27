@@ -45,21 +45,40 @@
     },
     "awsPartition": {
       "type": "string",
-      "enum": ["aws", "aws-cn", "aws-us-gov"]
+      "enum": [
+        "aws",
+        "aws-cn",
+        "aws-us-gov"
+      ]
     },
     "kmsArn": {
       "type": "string",
       "maxLength": 90,
-      "pattern": "arn:aws[a-zA-Z-]*:kms:[a-z]{2}((-gov)|(-iso(b?)))?-[a-z]+-[0-9]{1}:[0-9]{12}:key[/]{1}[a-zA-Z0-9-]+"
+      "pattern": "arn:aws-cn[a-zA-Z-]*:kms:[a-z]{2}((-gov)|(-iso(b?)))?-[a-z]+-[0-9]{1}:[0-9]{12}:key[/]{1}[a-zA-Z0-9-]+"
     },
     "access": {
       "type": "string",
-      "enum": ["roles", "accessPoint", "bucketPolicy"]
+      "enum": [
+        "roles",
+        "accessPoint",
+        "bucketPolicy"
+      ]
     },
     "sse": {
       "type": "string",
-      "enum": ["kms", "s3", "none"]
+      "enum": [
+        "kms",
+        "s3",
+        "none"
+      ]
     }
   },
-  "required": ["accountId", "name", "region", "awsPartition", "access", "sse"]
+  "required": [
+    "accountId",
+    "name",
+    "region",
+    "awsPartition",
+    "access",
+    "sse"
+  ]
 }

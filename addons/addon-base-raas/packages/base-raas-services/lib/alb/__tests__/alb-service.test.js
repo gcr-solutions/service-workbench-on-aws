@@ -415,7 +415,7 @@ describe('ALBService', () => {
       Rules: [
         {
           RuleArn:
-            'arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
+            'arn:aws-cn:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
         },
       ],
     };
@@ -423,7 +423,7 @@ describe('ALBService', () => {
       Rules: [
         {
           RuleArn:
-            'arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
+            'arn:aws-cn:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
         },
       ],
     };
@@ -555,7 +555,7 @@ describe('ALBService', () => {
       });
       service.updateAlbDependentWorkspaceCount = jest.fn();
       const validateARN =
-        'arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee';
+        'arn:aws-cn:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee';
       albClient.describeRules = jest.fn().mockImplementation(() => {
         return {
           promise: () => {
@@ -623,7 +623,7 @@ describe('ALBService', () => {
       Rules: [
         {
           RuleArn:
-            'arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
+            'arn:aws-cn:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
         },
       ],
     };
@@ -684,7 +684,7 @@ describe('ALBService', () => {
         envId: '018bb1e1-6bd3-49d9-b608-051cfb180882',
         prefix: 'rstudio',
         ruleARN:
-          'arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
+          'arn:aws-cn:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
       };
       const subdomain = 'rtsudio-test.example.com';
       const params = {
@@ -726,7 +726,7 @@ describe('ALBService', () => {
         cidr: ['10.0.0.0/32'],
         prefix: 'rstudio',
         ruleARN:
-          'arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
+          'arn:aws-cn:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
       };
       const subdomain = 'rtsudio-test.example.com';
       const params = {
@@ -774,7 +774,7 @@ describe('ALBService', () => {
         cidr: [],
         prefix: 'rstudio',
         ruleARN:
-          'arn:aws:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
+          'arn:aws-cn:elasticloadbalancing:us-west-2:123456789012:listener-rule/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2/9683b2d02a6cabee',
       };
       albClient.modifyRule = jest.fn().mockImplementation(() => {
         throw new Error(`Error modify rule. Rule modify failed with message - A condition value cannot be empty`);

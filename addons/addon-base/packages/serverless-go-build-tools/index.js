@@ -86,7 +86,7 @@ class GoBuildTools {
     return new provider.sdk.S3({
       region,
       credentials: awsCredentials,
-      endpoint: `https://s3.ap-east-1.amazonaws.com`,
+      endpoint: `https://s3.cn-north-1.amazonaws.com.cn`,
     });
   }
 

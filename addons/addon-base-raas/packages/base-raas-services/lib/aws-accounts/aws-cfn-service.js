@@ -249,7 +249,7 @@ class AwsCfnService extends Service {
       externalId: account.externalId,
       permissionStatus: 'PENDING',
       onboardStatusRoleArn: [
-        'arn:aws:iam::',
+        'arn:aws-cn:iam::',
         account.accountId,
         ':role/',
         createParams.namespace,
