@@ -20,15 +20,16 @@ module.exports.merged = require('@aws-ee/base-serverless-settings-helper').merge
     './.defaults.yml',
     '../../../../config/settings/${stage}.yml',
     './${stage}.yml',
-  ],
-  {
-    crossRegionCloudFormation: {
-      edgeLambdaStackName: [
-        {
-          settingName: 'edgeLambdaArn',
-          outputKey: 'EdgeLambdaArn',
-        },
-      ],
-    },
-  },
+  ]
+  // ,
+  // {
+  //   crossRegionCloudFormation: {
+  //     edgeLambdaStackName: [
+  //       {
+  //         settingName: 'edgeLambdaArn',
+  //         outputKey: 'EdgeLambdaArn',
+  //       },
+  //     ],
+  //   },
+  // },
 );
